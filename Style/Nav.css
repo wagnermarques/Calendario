@@ -1,0 +1,32 @@
+nav {
+    background-color: gray; /* Cor de fundo */
+    width: 100%;
+    text-align: center; /* Centraliza o texto dentro do nav */
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centraliza os itens no eixo horizontal */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding: 5px 0; /* Menos espaço em cima e embaixo */
+    height: auto; /* Permite que a altura seja automática com base no conteúdo */
+}
+
+.nav_itens {
+    display: inline-block; /* Coloca os itens lado a lado */
+    margin: 5px; /* Espaço menor entre os itens */
+    border: 1px solid #ccc; /* Borda para visualizar os itens */
+    padding: 5px; /* Espaço interno menor ao redor do conteúdo */
+    width: auto; /* A largura pode ser ajustada automaticamente */
+    height: 100px;
+    max-height: 150px;
+}
+
+.logo {
+   width: 100px;
+   height: 50px;
+   padding: 2px;
+   float: right;
+}
+
+
+.texto {
+    line-height: 1.5; /* Altura de linha adequada */
+}
