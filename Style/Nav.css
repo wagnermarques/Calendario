@@ -1,32 +1,57 @@
-nav {
-    background-color: gray; /* Cor de fundo */
-    width: 100%;
-    text-align: center; /* Centraliza o texto dentro do nav */
-    display: flex; /* Usar flexbox */
-    justify-content: center; /* Centraliza os itens no eixo horizontal */
-    align-items: center; /* Alinha os itens verticalmente */
-    padding: 5px 0; /* Menos espaço em cima e embaixo */
-    height: auto; /* Permite que a altura seja automática com base no conteúdo */
+.nav {
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    margin-right: 5vh;
+    min-height: 20vh; /* Altera para min-height */
+    margin-left: 5vh;
+    position: relative; 
 }
 
-.nav_itens {
-    display: inline-block; /* Coloca os itens lado a lado */
-    margin: 5px; /* Espaço menor entre os itens */
-    border: 1px solid #ccc; /* Borda para visualizar os itens */
-    padding: 5px; /* Espaço interno menor ao redor do conteúdo */
-    width: auto; /* A largura pode ser ajustada automaticamente */
-    height: 100px;
-    max-height: 150px;
+.texto { 
+    margin-left: 10vh;
+    line-height: 1.5; /* Ajustado para melhor legibilidade */
+    flex: 1; /* Use flex: 1 para ocupar o espaço disponível */
 }
 
-.logo {
-   width: 100px;
-   height: 50px;
-   padding: 2px;
-   float: right;
+.cpsImg, .spImg {
+    align-self: center; 
+    margin: 0 5vh 0 auto; /* Simplificado */
 }
 
+.cursos {
+    text-align: center;
+    background-color: silver;
+    border: 1px solid black;
+    margin-top: 0; 
+    margin-left: 5vh; 
+    margin-right: 5vh;
+}
 
-.texto {
-    line-height: 1.5; /* Altura de linha adequada */
+th {
+    background-color: silver;
+    border: 1px solid black;
+    padding: 10px; /* Adicionado padding */
+}
+
+.gridCurso {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto; 
+    gap: 10px; 
+    border: 1px solid black; /* Corrigido */
+}
+
+.gridCursos1,.gridCursos2,.gridCursos3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+
+.Adm, .AdmMtec, .Cont, .Ads,.AdsMtec,.Log,.LogMtec,.Rh,.Juri,.Vazio {
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px; /* Adicionado padding */
 }

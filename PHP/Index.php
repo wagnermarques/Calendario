@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Style/Index.css">
+    <link rel="stylesheet" href="/Style/calendario.css">
     <title>Index</title>
 </head>
 <body>
-    <header>
+    <nav>
         <?php include("./Includes/Nav.php"); ?>
-    </header>
+    </nav>
     <main>
-        <h1>Bem-vindo ao nosso site!</h1>
-        <p>Aqui está o conteúdo principal.</p>
+    <div class="calendario">
+            <div id="calendario"></div>
+    </div>
     </main>
+    <script src="../JavaScript/calendario.js"></script> <!-- Corrigido para src -->
 </body>
 </html>
