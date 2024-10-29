@@ -1,53 +1,108 @@
+/* Container principal */
+#calendario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-.calendario-container {
+/* Cada mês será um container dividido em quatro partes */
+.mes-container {
     display: grid;
-    grid-template-columns: 50px 1fr; /* 150px para os nomes dos meses, 1 parte para o calendário */
-    gap: 10px; /* Espaçamento entre os meses e o calendário */
-}
-
-.mes-nome-grid {
-    display: grid;
-    grid-template-rows: repeat(12, 1fr); /* 12 meses, cada um com a mesma altura */
-
-}
-
-.mes-nome {
-    writing-mode: vertical-rl; /* Muda o texto para vertical */
-    transform: rotate(180deg); /* Rotaciona o texto para ficar na direção correta */
-    font-weight: bold; /* Deixa o texto em negrito */
-    text-align: center; /* Centraliza o texto */
-    border-bottom: 1px solid #ccc; /* Borda inferior para cada mês */
-    padding: 10px; /* Espaçamento interno */
-    background-color: #f0f0f0; /* Cor de fundo */
-}
-
-.calendario-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 dias da semana */
-    gap: 0; /* Espaçamento entre as células do calendário */
-    border: 2px solid #000; /* Borda ao redor do calendário */
-}
-
-.calendario-mes {
-    background-color: #fff; /* Cor de fundo para as células */
-    border: 1px solid black; /* Borda das células */
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar destaque */
-}
-
-table {
-    border-collapse: collapse; /* Colapsa as bordas da tabela */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Divisão em quatro partes */
+    gap: 10px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    align-items: start;
     margin-left: 5vh;
     margin-right: 5vh;
-    border-color: 1px solid black;
 }
 
-
-td {
-    text-align: center; /* Centraliza o texto dos dias */
-    padding: 10px; /* Espaçamento interno das células */
-    border: 1px solid black; /* Borda das células */
+/* Nome do mês */
+.nomeMes {
+    font-weight: bold;
+    text-align: center;
+    grid-column: 1 / 2; /* Alocado na primeira coluna */
 }
 
-.empty {
-    background-color: #f9f9f9; /* Cor para células vazias */
+/* Container para o calendário */
+.DiasMes {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto auto;
+    gap: 2px;
+    grid-column: 2 / 3; /* Alocado na segunda coluna */
+}
+
+/* Grid para dias da semana */
+.DiasSemanas {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Cada dia do mês */
+.Dia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilos para diferentes tipos de dias */
+.Dia.letivo { background-color: #ffffff; }
+.Dia.nao-letivo { background-color: #ffcccc; }
+.Dia.atribuicao { background-color: #ffd700; }
+.Dia.reuniao-nao-letivo { background-color: #ffa07a; }
+.Dia.reuniao-letivo { background-color: #90ee90; }
+.Dia.conselho-letivo { background-color: #add8e6; }
+.Dia.outras-reunioes { background-color: #d3d3d3; }
+
+/* Descrição dos feriados */
+.Feriado {
+    font-size: 14px;
+    color: #333;
+    padding: 5px;
+    grid-column: span 1; /* Alocado nas colunas 3 e 4 */
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+#modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+}
+
+#modal label {
+    display: block;
+    margin: 8px 0 4px;
+}
+
+#modal button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
 }
