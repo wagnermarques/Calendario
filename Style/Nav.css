@@ -3,9 +3,9 @@
     border: 1px solid black;
     display: flex;
     align-items: center; /* Centraliza verticalmente */
-    margin-right: 5vh;
+    margin-right: 3%;
     min-height: 20vh; /* Altera para min-height */
-    margin-left: 5vh;
+    margin-left: 3%;
     position: relative; 
 }
 
@@ -17,7 +17,7 @@
 
 .cpsImg, .spImg {
     align-self: center; 
-    margin: 0 5vh 0 auto; /* Simplificado */
+    margin: 0  0 auto; /* Simplificado */
 }
 
 .cursos {
@@ -25,8 +25,8 @@
     background-color: silver;
     border: 1px solid black;
     margin-top: 0; 
-    margin-left: 5vh; 
-    margin-right: 5vh;
+    margin-left: 3%; 
+    margin-right: 3%;
 }
 
 th {
@@ -46,8 +46,8 @@ th {
 .gridCursos1,.gridCursos2,.gridCursos3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin-left: 5vh;
-    margin-right: 5vh;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 .Adm, .AdmMtec, .Cont, .Ads,.AdsMtec,.Log,.LogMtec,.Rh,.Juri,.Vazio {

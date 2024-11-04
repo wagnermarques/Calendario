@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const descricaoInput = document.getElementById("descricao-dia");
     const mensagemErro = document.getElementById("mensagem-erro");
     let diaSelecionado = null;
-    const ano = 2024;
+    const ano = 2025;
 
     // Exemplo de feriados (dia, mês, descrição)
     const feriados = [
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function renderizarDiasDoMes(diasMesContainer, mes) {
         const primeiroDia = new Date(ano, mes, 1).getDay();
         const diasNoMes = new Date(ano, mes + 1, 0).getDate();
-
+        
         for (let i = 0; i < primeiroDia; i++) {
             const emptyDiv = document.createElement("div");
             emptyDiv.classList.add("Dia");
