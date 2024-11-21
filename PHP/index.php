@@ -10,13 +10,14 @@
     <title>Index</title>
 </head>
 <body>
+    <?php include("main.php"); ?>
     <nav>
         <?php include("./Includes/Nav.php"); ?>
     </nav>
     <div>
         <?php include("./calendario.php");?>
     </div>
-    <?php include("main.php"); ?>
+    
     <script src="../JavaScript/calendario.js"></script> <!-- Corrigido para src -->
 </body>
 </html>

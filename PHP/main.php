@@ -9,5 +9,5 @@
     $stmt->closeCursor();
     $conn = null;
     foreach ($alunos as $aluno) {
-        echo $aluno['nome'] . '<br>';
+        echo $aluno['nome'] . ' ijiji<br>';
     }
