@@ -16,6 +16,7 @@
     <div>
         <?php include("./calendario.php");?>
     </div>
+    <?php include("main.php"); ?>
     <script src="../JavaScript/calendario.js"></script> <!-- Corrigido para src -->
 </body>
 </html>
